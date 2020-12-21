@@ -41,7 +41,15 @@ public class MainActivity extends AppCompatActivity
                     startService(intent);
                 } // for closed
             } // onClick closed
-        });
+        }); //
 
     } // onCreate closed
+
+    public void closeIt(View view)
+    {
+        
+        Intent intent = new Intent(context,DownloadService.class);
+        stopService(intent);
+
+    } // closeIt closed
 }
